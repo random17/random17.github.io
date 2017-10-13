@@ -17,12 +17,12 @@ mui(document.body).on('tap', '#calculateBtn', function(e) {
 			'7','7','7','7','7','8','8','8','8','8',
 			'9','9','9','9','9','0','0','0','0','0',
 			'J','J','J','J','J','Q','Q','Q','Q','Q','K','K','K','K','K'];
-		
 
- 		var value1 = document.getElementById("card1").value.split("") ;
- 		var value2 = document.getElementById("card2").value.split("") ;
- 		var value3 = document.getElementById("card3").value.split("") ;
- 		var value4 = document.getElementById("card4").value.split("") ;
+
+ 		var value1 = document.getElementById("card1").value.toUpperCase().split("") ;
+ 		var value2 = document.getElementById("card2").value.toUpperCase().split("") ;
+ 		var value3 = document.getElementById("card3").value.toUpperCase().split("") ;
+ 		var value4 = document.getElementById("card4").value.toUpperCase().split("") ;
 
  	 	Array.prototype.indexOf = function(val) {
 			for (var i = 0; i < this.length; i++) {
@@ -42,7 +42,7 @@ mui(document.body).on('tap', '#calculateBtn', function(e) {
 		removeCard(value2);
 		removeCard(value3);
 		removeCard(value4);
-		
+
 		document.getElementById("cardFinal").value=cards.join("") ;
 });
 
@@ -52,6 +52,3 @@ function removeCard(card){
 		cards.remove(card[i]);
 	}
 }
-
-
-
